@@ -1,0 +1,30 @@
+abstract {{grammar}} = {
+  flags startcat = Statement ; 
+
+  cat Temporal ; Negativity ; Statement ; Triple ; Individual ; Property ; Modality ; Class ;
+
+  {{#objectproperties}}
+  fun {{#frag}}{{prop}}{{/frag}} : Property ;
+  {{/objectproperties}}{{#individuals}}
+  fun {{#frag}}{{individual}}{{/frag}} : Individual ;
+  {{/individuals}}{{#classes}}
+  fun {{#frag}}{{class}}{{/frag}} : Class ;
+  {{/classes}}
+  lin iitriple = mkCl ; 
+  lin citriple = mkCl ; 
+  lin ictriple = mkCl ; 
+  lin cctriple = mkCl ; 
+  lin modiitriple s mod p o = mkCl s mod (mkVP p o) ;
+  lin modcitriple s mod p o = mkCl s mod (mkVP p o) ;
+  lin modictriple s mod p o = mkCl s mod (mkVP p o) ;
+  lin modcctriple s mod p o = mkCl s mod (mkVP p o) ;
+  lin pos = positivePol ;
+  lin neg = negativePol ;
+  lin want = want_VV ;
+  lin can = can_VV ;
+  lin must = must_VV ;
+  lin pres = (mkTemp presentTense simultaneousAnt ) ;
+  lin fut = (mkTemp futureTense simultaneousAnt ) ;
+  lin past = (mkTemp pastTense simultaneousAnt ) ;
+  lin stat = mkS ;
+}

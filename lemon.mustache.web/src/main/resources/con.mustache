@@ -1,0 +1,34 @@
+concrete {{grammar}}{{lang}} of example = open Syntax{{lang}}, Paradigms{{lang}}, Irreg{{lang}}, Noun{{lang}}, Adverb{{lang}} in {
+  lincat 
+     Statement = S ;
+     Triple = Cl ; 
+     Temporal = Temp ;
+     Negativity = Pol ;
+     Individual = NP ;	
+     Class = NP ;
+     Property = V2 ;
+     Modality = VV ;
+  {{#verbs}}
+  lin {{#frag}}{{ref}}{{/frag}} = mkV2 ( mkV "{{form}}" ) ;{{/verbs}}
+  {{#properNouns}}
+  lin {{#frag}}{{ref}}{{/frag}} = mkNP ( mkN "{{form}}" ) ;{{/properNouns}}
+  {{#nouns}}
+  lin {{#frag}}{{ref}}{{/frag}} = mkNP ( mkN "{{form}}" ) ;{{/nouns}}
+  lin iitriple = mkCl ; 
+  lin citriple = mkCl ; 
+  lin ictriple = mkCl ; 
+  lin cctriple = mkCl ; 
+  lin modiitriple s mod p o = mkCl s mod (mkVP p o) ;
+  lin modcitriple s mod p o = mkCl s mod (mkVP p o) ;
+  lin modictriple s mod p o = mkCl s mod (mkVP p o) ;
+  lin modcctriple s mod p o = mkCl s mod (mkVP p o) ;
+  lin pos = positivePol ;
+  lin neg = negativePol ;
+  lin want = want_VV ;
+  lin can = can_VV ;
+  lin must = must_VV ;
+  lin pres = (mkTemp presentTense simultaneousAnt ) ;
+  lin fut = (mkTemp futureTense simultaneousAnt ) ;
+  lin past = (mkTemp pastTense simultaneousAnt ) ;
+  lin stat = mkS ;
+}

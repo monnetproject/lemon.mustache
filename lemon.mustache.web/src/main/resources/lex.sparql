@@ -1,0 +1,48 @@
+properNouns <<<
+   prefix owl: <http://www.w3.org/2002/07/owl#> 
+   prefix lemon: <http://www.monnet-project.eu/lemon#>
+   prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#>
+   select ?ref ?entry ?form where {
+      ?ref a owl:NamedIndividual .
+      ?canForm lemon:writtenRep ?form .
+      ?entry a lemon:LexicalEntry .
+      ?entry lemon:canonicalForm ?canForm .
+      ?entry lemon:sense ?sense .
+      ?sense lemon:reference ?ref .
+      ?entry lexinfo:partOfSpeech lexinfo:properNoun .
+      ?lexicon lemon:entry ?entry .
+      ?lexicon lemon:language "en" .
+}
+>>>
+verbs <<<
+   prefix owl: <http://www.w3.org/2002/07/owl#> 
+   prefix lemon: <http://www.monnet-project.eu/lemon#>
+   prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#>
+   select ?ref ?entry ?form where {
+      ?ref a owl:ObjectProperty .
+      ?canForm lemon:writtenRep ?form .
+      ?entry a lemon:LexicalEntry .
+      ?entry lemon:canonicalForm ?canForm .
+      ?entry lemon:sense ?sense .
+      ?sense lemon:reference ?ref .
+      ?entry lexinfo:partOfSpeech lexinfo:verb .
+      ?lexicon lemon:entry ?entry .
+      ?lexicon lemon:language "en" .
+}
+>>>
+nouns <<<
+   prefix owl: <http://www.w3.org/2002/07/owl#> 
+   prefix lemon: <http://www.monnet-project.eu/lemon#>
+   prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#>
+   select ?ref ?entry ?form where {
+      ?ref a owl:Class .
+      ?canForm lemon:writtenRep ?form .
+      ?entry a lemon:LexicalEntry .
+      ?entry lemon:canonicalForm ?canForm .
+      ?entry lemon:sense ?sense .
+      ?sense lemon:reference ?ref .
+      { ?entry lexinfo:partOfSpeech lexinfo:noun } union { ?entry lexinfo:partOfSpeech lexinfo:commonNoun } .
+      ?lexicon lemon:entry ?entry .
+      ?lexicon lemon:language "en" .
+}
+>>>

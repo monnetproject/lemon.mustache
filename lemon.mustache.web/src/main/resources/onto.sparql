@@ -1,0 +1,18 @@
+individuals <<<
+  prefix owl: <http://www.w3.org/2002/07/owl#> 
+  select ?individual where {
+      ?individual a owl:NamedIndividual
+  }
+>>>
+objectproperties <<<
+   prefix owl: <http://www.w3.org/2002/07/owl#> 
+   select ?prop where {
+       ?prop a owl:ObjectProperty
+   }
+>>>
+classes <<<
+   prefix owl: <http://www.w3.org/2002/07/owl#> 
+   select ?class where {
+       ?class a owl:Class
+   }
+>>>
