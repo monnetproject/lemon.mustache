@@ -8,10 +8,10 @@
   </parent>
 
     <groupId>eu.monnetproject</groupId>
-    <artifactId>lemon.mustachegf.web</artifactId>
+    <artifactId>lemon.mustache.web</artifactId>
     <packaging>war</packaging>
 
-    <name>eu.monnetproject.lemon.mustachegf.web</name>
+    <name>eu.monnetproject.lemon.mustache.web</name>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
