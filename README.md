@@ -31,5 +31,5 @@ then available as normal variables.
        {{x}} is an OWL class
     {{/#id}}
 
-Example grammars can be seen at [web/src/main/resources/]
+Example grammars can be seen at [here](web/src/main/resources/)
 
