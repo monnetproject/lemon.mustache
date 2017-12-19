@@ -3,15 +3,15 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
     <artifactId>lemon.mustache.project</artifactId>
-    <groupId>eu.monnetproject</groupId>
+    <groupId>com.github.monnetproject</groupId>
     <version>1.13.3</version>
   </parent>
 
-    <groupId>eu.monnetproject</groupId>
+    <groupId>com.github.monnetproject</groupId>
     <artifactId>lemon.mustache.web</artifactId>
     <packaging>war</packaging>
 
-    <name>eu.monnetproject.lemon.mustache.web</name>
+    <name>com.github.monnetproject.lemon.mustache.web</name>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>

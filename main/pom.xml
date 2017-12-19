@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-      <groupId>eu.monnetproject</groupId>
+      <groupId>com.github.monnetproject</groupId>
       <artifactId>lemon.mustache.project</artifactId>
       <version>1.13.3</version>
       <relativePath>..</relativePath>
@@ -12,7 +12,7 @@
     <artifactId>lemon.mustache</artifactId>
     <packaging>jar</packaging>
 
-    <name>eu.monnetproject.lemon.mustache OSGi Bundle</name>
+    <name>com.github.monnetproject.lemon.mustache OSGi Bundle</name>
 
     <build>
         <plugins>
@@ -21,7 +21,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.2.1</version>
                 <configuration>
-                    <mainClass>eu.monnetproject.lemon.tache.LemonGFTache</mainClass>
+                    <mainClass>com.github.monnetproject.lemon.tache.LemonGFTache</mainClass>
                 </configuration>
             </plugin>
         </plugins>
